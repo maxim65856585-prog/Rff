@@ -1,0 +1,359 @@
+```html
+<!DOCTYPE html>
+<html lang="ru" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zenin Files | Официальный Telegram-канал</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- QR Code Generator Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        cyber: {
+                            bg: '#05070f',
+                            card: 'rgba(12, 18, 34, 0.65)',
+                            cyan: '#00f0ff',
+                            blue: '#0088cc',
+                            purple: '#7000ff',
+                            neon: '#00f3ff',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        tech: ['Orbitron', 'sans-serif'],
+                    },
+                    animation: {
+                        'glow-pulse': 'glowPulse 3s ease-in-out infinite alternate',
+                        'float': 'float 5s ease-in-out infinite',
+                        'laser': 'laserScan 4s linear infinite',
+                    },
+                    keyframes: {
+                        glowPulse: {
+                            '0%': { boxShadow: '0 0 15px rgba(0, 240, 255, 0.2), inset 0 0 15px rgba(0, 240, 255, 0.1)' },
+                            '100%': { boxShadow: '0 0 35px rgba(0, 240, 255, 0.6), inset 0 0 25px rgba(0, 240, 255, 0.3)' },
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-12px)' },
+                        },
+                        laserScan: {
+                            '0%': { transform: 'translateY(-100%)' },
+                            '100%': { transform: 'translateY(1000%)' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Futuristic Background Grid */
+        .cyber-grid {
+            background-size: 40px 40px;
+            background-image: 
+                linear-gradient(to right, rgba(0, 240, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(0, 240, 255, 0.03) 1px, transparent 1px);
+        }
+
+        /* Glassmorphism Styling */
+        .glass-card {
+            background: rgba(10, 16, 30, 0.7);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(0, 240, 255, 0.15);
+        }
+
+        .glass-button {
+            background: rgba(15, 23, 42, 0.6);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .glass-button:hover {
+            border-color: rgba(0, 240, 255, 0.5);
+            background: rgba(0, 240, 255, 0.1);
+        }
+
+        /* Neon Text Effect */
+        .text-neon {
+            text-shadow: 0 0 12px rgba(0, 240, 255, 0.7), 0 0 25px rgba(0, 240, 255, 0.3);
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #05070f;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #0088cc;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body class="bg-cyber-bg text-slate-100 font-sans min-h-screen flex flex-col justify-between overflow-x-hidden relative selection:bg-cyber-cyan selection:text-black cyber-grid">
+
+    <!-- Ambient Neon Background Blobs -->
+    <div class="fixed top-[-10%] left-[20%] w-[500px] h-[500px] bg-cyber-purple/20 rounded-full blur-[150px] pointer-events-none z-0"></div>
+    <div class="fixed bottom-[-10%] right-[10%] w-[550px] h-[550px] bg-cyber-cyan/15 rounded-full blur-[160px] pointer-events-none z-0"></div>
+
+    <!-- Main Container -->
+    <main class="relative z-10 flex-grow flex items-center justify-center p-4 sm:p-6 md:p-10">
+        <div class="max-w-lg w-full">
+            
+            <!-- Glassmorphism Card -->
+            <div class="glass-card rounded-3xl p-6 sm:p-8 shadow-[0_0_50px_rgba(0,0,0,0.8)] relative overflow-hidden animate-glow-pulse transition-all duration-300">
+                
+                <!-- Laser Scanning Line Decorative Effect -->
+                <div class="absolute top-0 left-0 right-0 h-20 bg-gradient-to-b from-cyber-cyan/10 to-transparent pointer-events-none animate-laser"></div>
+
+                <!-- Avatar & Title Section -->
+                <div class="flex flex-col items-center text-center mb-8 relative">
+                    
+                    <!-- Avatar Frame -->
+                    <div class="relative mb-5 animate-float">
+                        <!-- Outer Neon Ring -->
+                        <div class="absolute -inset-1.5 bg-gradient-to-r from-cyber-cyan via-cyber-blue to-cyber-purple rounded-full blur opacity-80 animate-pulse"></div>
+                        
+                        <!-- Avatar Content -->
+                        <div class="relative w-28 h-28 sm:w-32 sm:h-32 rounded-full bg-slate-950 border-2 border-cyber-cyan/60 flex items-center justify-center shadow-2xl overflow-hidden">
+                            <i class="fa-brands fa-telegram text-cyber-cyan text-6xl sm:text-7xl transform hover:scale-110 transition duration-300 drop-shadow-[0_0_15px_rgba(0,240,255,0.8)]"></i>
+                        </div>
+
+                        <!-- Verified Badge -->
+                        <div class="absolute bottom-1 right-1 bg-cyber-cyan text-slate-950 rounded-full w-8 h-8 flex items-center justify-center shadow-lg border-2 border-slate-900 font-bold" title="Проверенный канал">
+                            <i class="fa-solid fa-check text-sm"></i>
+                        </div>
+                    </div>
+
+                    <!-- Channel Title -->
+                    <h1 class="font-tech text-3xl sm:text-4xl font-black tracking-wide text-white mb-2 text-neon">
+                        ZENIN_FILES
+                    </h1>
+
+                    <!-- Telegram Handle Badge -->
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-cyber-cyan/10 border border-cyber-cyan/30 text-cyber-cyan text-xs font-semibold tracking-wider uppercase mb-4">
+                        <span class="w-2 h-2 rounded-full bg-cyber-cyan animate-ping"></span>
+                        @Zenin_Files
+                    </div>
+
+                    <!-- Description -->
+                    <p class="text-slate-300 text-sm sm:text-base leading-relaxed font-light max-w-sm">
+                        Официальное хранилище файлов, эксклюзивных материалов и цифрового контента. Включайся прямо сейчас!
+                    </p>
+                </div>
+
+                <!-- Main Action Buttons -->
+                <div class="space-y-4">
+                    
+                    <!-- Primary CTA Button -->
+                    <a href="https://t.me/Zenin_Files" target="_blank" rel="noopener noreferrer" 
+                       class="w-full relative group overflow-hidden rounded-2xl p-[2px] font-bold text-white shadow-[0_0_30px_rgba(0,136,204,0.4)] transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] block">
+                        
+                        <!-- Gradient Border Background -->
+                        <span class="absolute inset-0 bg-gradient-to-r from-cyber-cyan via-cyber-blue to-cyber-purple rounded-2xl"></span>
+                        
+                        <span class="relative flex items-center justify-center gap-3 px-6 py-4 rounded-[14px] bg-slate-950/80 backdrop-blur-md group-hover:bg-transparent transition duration-300 text-base sm:text-lg tracking-wide uppercase font-tech">
+                            <i class="fa-brands fa-telegram text-2xl text-cyber-cyan group-hover:text-white group-hover:rotate-12 transition duration-300"></i>
+                            Перейти в Telegram
+                            <i class="fa-solid fa-chevron-right text-xs text-cyber-cyan group-hover:translate-x-1.5 transition duration-300"></i>
+                        </span>
+                    </a>
+
+                    <!-- Secondary Action Grid (Copy & QR Modal) -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
+                        
+                        <!-- Copy Button -->
+                        <button onclick="copyLink()" 
+                                class="glass-button text-slate-200 hover:text-white font-medium py-3 px-4 rounded-xl transition duration-200 flex items-center justify-center gap-2.5 active:scale-95 text-sm">
+                            <i class="fa-regular fa-copy text-cyber-cyan"></i>
+                            <span id="copyText">Скопировать ссылку</span>
+                        </button>
+
+                        <!-- QR Code Button -->
+                        <button onclick="toggleQRModal(true)" 
+                                class="glass-button text-slate-200 hover:text-white font-medium py-3 px-4 rounded-xl transition duration-200 flex items-center justify-center gap-2.5 active:scale-95 text-sm">
+                            <i class="fa-solid fa-qrcode text-cyber-cyan"></i>
+                            <span>Показать QR-код</span>
+                        </button>
+
+                    </div>
+                </div>
+
+                <!-- Footer Link Info -->
+                <div class="mt-6 pt-5 border-t border-slate-800/80 flex items-center justify-between text-xs text-slate-400 font-mono">
+                    <span class="truncate">https://t.me/Zenin_Files</span>
+                    <span class="text-cyber-cyan flex items-center gap-1.5">
+                        <i class="fa-solid fa-shield-halved"></i> Verified
+                    </span>
+                </div>
+
+            </div>
+
+            <!-- Footer Copyright -->
+            <p class="text-center text-xs text-slate-500 mt-6 font-mono">
+                &copy; <span id="year"></span> ZENIN_FILES. ALL RIGHTS RESERVED.
+            </p>
+        </div>
+    </main>
+
+    <!-- QR Code Modal -->
+    <div id="qrModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/85 backdrop-blur-lg opacity-0 pointer-events-none transition-all duration-300">
+        
+        <div id="qrCard" class="glass-card max-w-sm w-full rounded-3xl p-6 sm:p-8 text-center relative border border-cyber-cyan/30 transform scale-90 transition-all duration-300 shadow-[0_0_50px_rgba(0,240,255,0.2)]">
+            
+            <!-- Close Button -->
+            <button onclick="toggleQRModal(false)" class="absolute top-4 right-4 text-slate-400 hover:text-white w-8 h-8 rounded-full bg-slate-900/60 flex items-center justify-center transition border border-slate-700">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <!-- Modal Title -->
+            <h3 class="font-tech text-xl font-bold text-white mb-1 tracking-wider">QR-КОД КАНАЛА</h3>
+            <p class="text-xs text-slate-400 mb-6">Отсканируйте камеру смартфона</p>
+
+            <!-- QR Code Display Area -->
+            <div class="relative inline-block p-4 bg-white rounded-2xl shadow-[0_0_25px_rgba(255,255,255,0.2)] mb-6">
+                <div id="qrcode" class="flex justify-center items-center"></div>
+            </div>
+
+            <!-- Download Button -->
+            <button onclick="downloadQR()" class="w-full bg-gradient-to-r from-cyber-blue to-cyber-cyan text-slate-950 font-bold py-3 px-4 rounded-xl transition hover:opacity-95 flex items-center justify-center gap-2 text-sm shadow-[0_0_20px_rgba(0,240,255,0.4)] font-tech">
+                <i class="fa-solid fa-download"></i>
+                СКАЧАТЬ QR-КОД
+            </button>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="fixed bottom-8 left-1/2 transform -translate-x-1/2 z-50 transition-all duration-300 opacity-0 translate-y-10 pointer-events-none">
+        <div class="glass-card bg-slate-950/90 text-white px-5 py-3 rounded-2xl shadow-[0_0_30px_rgba(0,240,255,0.3)] border border-cyber-cyan/50 flex items-center gap-3">
+            <div class="w-7 h-7 rounded-full bg-cyber-cyan/20 text-cyber-cyan flex items-center justify-center text-sm">
+                <i class="fa-solid fa-check"></i>
+            </div>
+            <span class="text-sm font-medium tracking-wide">Ссылка скопирована в буфер!</span>
+        </div>
+    </div>
+
+    <!-- JavaScript Logic -->
+    <script>
+        const TG_URL = "https://t.me/Zenin_Files";
+
+        // Set Current Year
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Copy Link Functionality
+        function copyLink() {
+            if (navigator.clipboard && window.isSecureContext) {
+                navigator.clipboard.writeText(TG_URL).then(showToast).catch(fallbackCopy);
+            } else {
+                fallbackCopy();
+            }
+        }
+
+        function fallbackCopy() {
+            const area = document.createElement("textarea");
+            area.value = TG_URL;
+            area.style.position = "fixed";
+            area.style.left = "-9999px";
+            document.body.appendChild(area);
+            area.focus();
+            area.select();
+            try {
+                document.execCommand('copy');
+                showToast();
+            } catch (err) {
+                console.error('Ошибка при копировании:', err);
+            }
+            document.body.removeChild(area);
+        }
+
+        // Show Toast Notification
+        function showToast() {
+            const toast = document.getElementById('toast');
+            const copyText = document.getElementById('copyText');
+
+            copyText.textContent = 'Скопировано!';
+
+            toast.classList.remove('opacity-0', 'translate-y-10', 'pointer-events-none');
+            toast.classList.add('opacity-100', 'translate-y-0');
+
+            setTimeout(() => {
+                toast.classList.remove('opacity-100', 'translate-y-0');
+                toast.classList.add('opacity-0', 'translate-y-10', 'pointer-events-none');
+                copyText.textContent = 'Скопировать ссылку';
+            }, 2500);
+        }
+
+        // QR Code Modal Functions
+        const modal = document.getElementById('qrModal');
+        const card = document.getElementById('qrCard');
+
+        function toggleQRModal(show) {
+            if (show) {
+                modal.classList.remove('opacity-0', 'pointer-events-none');
+                modal.classList.add('opacity-100');
+                card.classList.remove('scale-90');
+                card.classList.add('scale-100');
+            } else {
+                modal.classList.remove('opacity-100');
+                modal.classList.add('opacity-0', 'pointer-events-none');
+                card.classList.remove('scale-100');
+                card.classList.add('scale-90');
+            }
+        }
+
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) toggleQRModal(false);
+        });
+
+        // Generate QR Code
+        window.addEventListener('load', () => {
+            const container = document.getElementById("qrcode");
+            container.innerHTML = "";
+            new QRCode(container, {
+                text: TG_URL,
+                width: 170,
+                height: 170,
+                colorDark: "#05070f",
+                colorLight: "#ffffff",
+                correctLevel: QRCode.CorrectLevel.H
+            });
+        });
+
+        // Download QR Image
+        function downloadQR() {
+            const canvas = document.querySelector("#qrcode canvas");
+            const img = document.querySelector("#qrcode img");
+
+            let src = canvas ? canvas.toDataURL("image/png") : (img ? img.src : "");
+
+            if (src) {
+                const a = document.createElement("a");
+                a.href = src;
+                a.download = "Zenin_Files_QR.png";
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+            }
+        }
+    </script>
+</body>
+</html>
+```
